@@ -5,9 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Providers;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 class Contact extends Model
 {
-    use HasFactory;
+    use HasFactory,SoftDeletes;
     protected $table = 'contacts';
 
     // public function providers()
