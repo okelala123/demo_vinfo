@@ -38,9 +38,6 @@ class DistributorOrganizationController extends Controller
         $data->product_family_id = $request->product_family_id;
         $data->providers_id = $request->providers_id;
         $data->catalog_id = $request->catalog_id;
-        
-     
-  
         $data->save();
 
         return response()->json(['message' => 'successfully']);
