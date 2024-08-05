@@ -12,6 +12,7 @@ use App\Http\Controllers\DistributorMemberController;
 use App\Http\Controllers\DistributorOrganizationController;
 use App\Http\Controllers\DistributorPromotionController;
 use App\Http\Controllers\DistributorSettingController;
+use App\Http\Controllers\eVoucherController;
 use App\Http\Controllers\GroupController;
 use App\Http\Controllers\PaymentInfoController;
 use App\Http\Controllers\PricesController;
@@ -21,6 +22,7 @@ use App\Http\Controllers\ProductOptionController;
 use App\Http\Controllers\ProductPropertyController;
 use App\Http\Controllers\SendZaloController;
 use App\Http\Controllers\TpaController;
+use App\Http\Controllers\ValidDayController;
 use App\Models\DistributorSetting;
 use App\Models\Group;
 use App\Models\ProductProperty;
@@ -254,4 +256,21 @@ Route::post('/updateTPA/{id}', [TpaController::class, 'updateTPA']);
 Route::post('/deleteTPA/{id}', [TpaController::class, 'deleteTPA']); 
 
 Route::post('/searchTPA', [TpaController::class, 'searchTPA']); 
+
+
+//valid day
+Route::post('/createValidDay', [ValidDayController::class, 'createValidDay']); 
+
+Route::post('/updateValidDay/{id}', [ValidDayController::class, 'updateValidDay']); 
+
+Route::post('/deleteValidDay/{id}', [ValidDayController::class, 'deleteValidDay']); 
+
+//e-voucher.
+Route::post('/createVouCher', [eVoucherController::class, 'createVouCher']); 
+
+Route::post('/updateVouCher/{id}', [eVoucherController::class, 'updateVouCher']); 
+
+Route::post('/deleteVouCher/{id}', [eVoucherController::class, 'deleteVouCher']); 
+
+Route::post('/searchVouCher', [eVoucherController::class, 'searchVouCher']); 
 });

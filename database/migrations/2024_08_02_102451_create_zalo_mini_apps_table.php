@@ -13,9 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('distributor_settings', function (Blueprint $table) {
+        Schema::create('zalo_mini_apps', function (Blueprint $table) {
+            $table->id();
+            $table->string('name')->nullable();
             $table->softDeletes();
-            //
+            $table->timestamps();
         });
     }
 
@@ -26,9 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('distributor_settings', function (Blueprint $table) {
-            $table->dropSoftDeletes();
-            //
-        });
+        Schema::dropIfExists('zalo_mini_apps');
     }
 };
